@@ -1,5 +1,5 @@
 from BeautifulSoup import BeautifulSoup
-import os,pdb
+import os,pdb,re
 
 #where the html files are stored
 folder = "~/76ers/web_scrape/data/html/" #include trainling slash!
@@ -23,7 +23,7 @@ for dt in fnames:
             counter = 0
             #loop through the teams
             for team in row.find('div',{'class': "el-div eventLine-team"}).findAll('span',{'class': 'team-name'}):
-                d[counter]=team.string.lower().strip().replace('.','')
+                d[counter]=re.sub('\([0-9]{1,2}\)[^a-z]','',team.string.lower().strip().replace('.',''))
                 counter+=1
 
             #loop through the different odds and build csv    
