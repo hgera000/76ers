@@ -21,9 +21,22 @@ for dt in fnames:
             id+=1
             d = {}
             counter = 0
-            #loop through the teams
+            #loop through the teams and also pick out scores 
             for team in row.find('div',{'class': "el-div eventLine-team"}).findAll('span',{'class': 'team-name'}):
                 d[counter]=re.sub('\([0-9]{1,2}\)[^a-z]','',team.string.lower().strip().replace('.',''))
+                counter+=1
+
+            #get the final score for each team to determine result
+            #pdb.set_trace()
+            counter = 0
+            for score in row.findAll('div',{'class': "score-periods"}):
+                #if notation below is clunky - class are not named the same in th html. regex matching would be cleaner here but slower. 
+                if counter==0:
+                    sc = score.find('span',{'class': 'first total '}).string.strip() if score.find('span',{'class': 'first total '}) else "\N"
+
+                if counter==1:
+                    sc = score.find('span',{'class': 'total '}).string.strip() if score.find('span',{'class': 'total '}) else "\N"
+                d[counter]+= ","+sc
                 counter+=1
 
             #loop through the different odds and build csv    
