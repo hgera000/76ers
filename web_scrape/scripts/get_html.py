@@ -9,7 +9,7 @@ folder = "~/76ers/web_scrape/data/html/" #include trainling slash!
 
 #create list of dates for the 2013/14 season
 start = datetime.strptime('2013-11-08','%Y-%m-%d')
-dates = [start + timedelta(days=x) for x in range(0, 2)] #130 for end date 2014-03-17 (not including playoffs here). 
+dates = [start + timedelta(days=x) for x in range(0, 130)] #130 for end date 2014-03-17 (not including playoffs here). 
 
 #now loop through the dates and save the html to a folder
 #better to save the html and then parse than to parse on the fly - avoids unecessary hits to the website when debugging parsing script.
