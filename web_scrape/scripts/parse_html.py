@@ -10,8 +10,8 @@ fnames.sort() #chronological order given the date format.
 #each row is a team that played for that day. 
 
 for dt in fnames: 
-    #with open(os.path.expanduser(folder) + dt,'r') as f:
-    with open(os.path.expanduser(folder)+'20131108.html') as f: #to test a single file.
+    with open(os.path.expanduser(folder) + dt,'r') as f:
+    #with open(os.path.expanduser(folder)+'20131108.html') as f: #to test a single file.
         table = BeautifulSoup(f.read())
         id = 0 #uniqe game id I am constructing
         #pdb.set_trace()

@@ -16,25 +16,26 @@ time python get_html.py
 
 #parse saved html and produce raw csv file
 time python parse_html.py > ../data/odds_and_spreads.csv
-#real	8m9.714s
+#real	3m2.486s
+
 
 #quick checks on the data extracted
 cd ../data
 wc -l odds_and_spreads.csv 
-#15080 rows (~7500 matches)
+#5650 odds_and_spreads.csv
 cut -d',' -f1 odds_and_spreads.csv | sort -u | wc -l
-#116 unique teams
-cut -d',' -f1 odds_and_spreads.csv | sort | uniq -c | sort | head
-#    130 air force
-#    130 alabama
-#    130 american u
-#    130 appalachian st
-#    130 arizona
-#    130 arkansas
-#    130 army
-#    130 baylor
-#    130 belmont
-#    130 boise st
+#369
+cut -d',' -f1 odds_and_spreads.csv | sort | uniq -c | sort -nr | head
+#     29 connecticut
+#     28 providence
+#     28 depaul
+#     27 maryland
+#     26 wisconsin
+#     26 west virginia
+#     26 baylor
+#     25 virginia
+#     25 south florida
+#     25 minnesota
 
 
 
