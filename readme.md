@@ -9,12 +9,12 @@ This readme file provides background and motivation for my analsis. The data sou
 ### Question ###
 Which teams out-performed or under-performed relative to 'market expectations' in the 2013-14 NCAA season? Can this metric signal the teams, and their players, worthy of closer attention in the 2015 draft?
 
-### Outline ###
-The key premise of this idea is to use online betting markets to measure aggregated market expectations about how a team will perform. Online betting markets or 'prediction markets' have been shown to efficiently aggregate information and offer accurate predictions, on average, about the outcome of future events (often referred to as the 'wisdom of crowds'). 
+### Outline and Methodology ###
+The key premise of this analysis is to use online betting markets to measure aggregated market expectations about how a team will perform. Online betting markets or 'prediction markets' have been shown to efficiently aggregate information and offer accurate predictions, on average, about the outcome of future events (often referred to as the 'wisdom of crowds'). 
 
-Betting market participants form their beliefs incorporating a wide range of information, including media commentary, statistics, and inside information, and this analysis using these aggregated beliefs (in the form of market prices) to provide a benchmark for how different teams were expected to perform throughout the 2013-14 season. 
+Betting market participants form their beliefs incorporating a wide range of information, including media commentary, statistics, and inside information. In this analysis we use these aggregated beliefs (in the form of market prices) to provide a benchmark for how different teams were expected to perform throughout the 2013-14 season. 
 
-To do this, for each team in the 2013/14 NCAA regular season, we calculate the return to investing $1 on them to 'beat the spread' in every game. A team which performs 'as expected' would generate a return of 0% (after giving back any market commissions). However, a team that performs surprisingly well, would generate a positive return of the course of the season (note that a team who performs surprisingly well according to this metric might still have performed poorly in an absolute sense). 
+To do this, for each team in the 2013/14 NCAA regular season, we calculate the return to investing $1 on that team to 'beat the spread' in every game. A team which performs 'as expected' would generate a return of 0% (after giving back any market commissions). However, a team that performs surprisingly well, would generate a positive return over the season (note that a team who performs surprisingly well according to this metric might still have performed poorly in an absolute sense). 
 
 The teams that out-performed the most (their performance was a surprise to the market) could warrant closer attention when considering the 2015 draft class. In particular, since their performance was (by definition according this metric) a surprise, it could be the case that certain players on these teams have been paid less attention in the media and may have flown 'under the radar' and as such could represent high-value draft prospects.
 
