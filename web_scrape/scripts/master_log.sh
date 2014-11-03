@@ -18,33 +18,12 @@ time python get_html.py
 time python parse_html.py > ../data/odds_and_spreads.csv
 #real	3m2.486s
 
-
-#quick checks on the data extracted
-cd ../data
-wc -l odds_and_spreads.csv 
-#5650 odds_and_spreads.csv
-cut -d',' -f1 odds_and_spreads.csv | sort -u | wc -l
-#369
-cut -d',' -f1 odds_and_spreads.csv | sort | uniq -c | sort -nr | head
-#     29 connecticut
-#     28 providence
-#     28 depaul
-#     27 maryland
-#     26 wisconsin
-#     26 west virginia
-#     26 baylor
-#     25 virginia
-#     25 south florida
-#     25 minnesota
-
-
-
-
 #here is where would 'load data infile' into MySQL. 
 
-#for now, extract team name, score, odds, spread, date, id, home/away 
+#to simplify use only provider's odds for now 
+#extract team name, score, odds, spread, date, id, home/away 
 
 cut -d',' -f1,2,7,8,24,25,26 odds_and_spreads.csv > cut_data.csv
 
-#take this across to R for analysis
-
+#take this across to R for analysis (Note this was run locally on laptop not server). 
+#Rscript analysis.R
