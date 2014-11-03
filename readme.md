@@ -66,6 +66,7 @@ Example Output:
 ```head cut_data.csv```
 
 | east tennessee st | 75 | -110 | +12.5 | 20131108 | 1 | away |
+|-------------------|----|------|-------|----------|---|------|
 | charlotte         | 80 | -110 | -12.5 | 20131108 | 1 | home |
 | presbyterian      | 57 | -110 | +17.5 | 20131108 | 2 | away |
 | georgia tech      | 88 | \N   | \N    | 20131108 | 2 | home |
@@ -76,10 +77,8 @@ Example Output:
 | lehigh            | \N | -110 | +15.5 | 20131108 | 5 | away |
 | minnesota         | \N | -110 | -15.5 | 20131108 | 5 | home |
 
-
-
 - [analysis.R](analysis.R) `R` script which loads the `csv` file created by `parse_html.py`, performs a few manipulations to the data, and then calculates the top out-performing teams. The results are also graphed in this script using `ggplot2`.
 
-- [master_log.sh](web_scrape/scripts/master_logs.sh) `bash` log file where the exact commands run were stored. 
+- [master_log.sh](web_scrape/scripts/master_log.sh) `bash` log file where the exact commands run were stored. 
 
 Note: A database such as `MySQL` would typically be included in into the work-flow above. That is, after extracting data in `csv` format from the raw `html` it could be added to a `MySQL` database (`load data infile`). 
